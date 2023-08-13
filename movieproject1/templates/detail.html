@@ -1,0 +1,22 @@
+
+
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+
+<div class="row">
+  <div class="col-sm-4">
+    <img src="{{movie.img.url}}" class="card-img-top" alt="..." height="250px">
+    </div>
+    <div class="col-sm-6 mt-5">
+     <a href="{% url 'movieapp:update' movie.id  %}" class="btn btn-primary">Update</a>
+      <a href="{% url 'movieapp:delete' movie.id  %}" class="btn btn-primary">Delete</a>
+    </div>
+  </div>
+
+
+
+
+
+{% endblock %}
